@@ -1,0 +1,52 @@
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.App h1 {
+  color: #333;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.App input[type="text"] {
+  width: 50%;
+  height: 40px;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.App button {
+  width: 20%;
+  height: 40px;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.App button:hover {
+  background-color: #3e8e41;
+}
+
+.App ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.App li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.App li:last-child {
+  border-bottom: none;
+}
