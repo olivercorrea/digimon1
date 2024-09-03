@@ -11,7 +11,7 @@ docker rm digimon-microservice-container digimon-frontend-container my-flask-con
 docker build -t my-digimonapi -f ./DigimonApi/Dockerfile ./DigimonApi
 
 # Ejecutar el contenedor del microservicio
-docker run -d --network my-network -p 8080:80 --name digimon-microservice-container my-digimonapi
+docker run -d --network my-network --restart=always -p 8080:80 --name digimon-microservice-container my-digimonapi
 
 # Esperar a que el microservicio se inicie
 sleep 5
@@ -20,7 +20,7 @@ sleep 5
 docker build -t my-flask-app -f ./digimon-flask/Dockerfile ./digimon-flask
 
 # Ejecutar el contenedor de Flask
-docker run -d --network my-network -p 5000:5000 --name my-flask-container my-flask-app
+docker run -d --network my-network --restart=always -p 5000:5000 --name my-flask-container my-flask-app
 
 # Esperar a que Flask se inicie
 sleep 5
@@ -29,7 +29,7 @@ sleep 5
 docker build -t digimon-frontend -f ./digimon-frontend/Dockerfile ./digimon-frontend
 
 # Ejecutar el contenedor del frontend
-docker run -d --network my-network -p 8081:80 --name digimon-frontend-container digimon-frontend
+docker run -d --network my-network --restart=always -p 8081:80 --name digimon-frontend-container digimon-frontend
 
 # Esperar a que el frontend se inicie
 sleep 5
